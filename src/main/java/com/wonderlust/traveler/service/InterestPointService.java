@@ -19,6 +19,10 @@ public class InterestPointService {
 	@Autowired
 	UserService userService;
 
+	public InterestPoint getInterestPointById(String id) {
+		return interestPointRepository.getInterestPointById(id);
+	}
+
 	public List<InterestPoint> getInterestPoints() {
 		return interestPointRepository.listInterestPoint();
 	}
@@ -35,7 +39,7 @@ public class InterestPointService {
 		interestPointRepository.addInterestPoint(interestPoint);
 	}
 
-	public List<InterestPoint> getBoundedCrimeEntries(Double x1, Double y1,
+	public List<InterestPoint> getBoundedInterestPoint(Double x1, Double y1,
 			Double x2, Double y2) {
 		return interestPointRepository.geoBoundInterestPoint(x1, y1, x2, y2);
 	}
@@ -46,6 +50,10 @@ public class InterestPointService {
 		UserModel user = userService.getUserByEmail(principal.getUsername());
 		InterestPoint newInterestPoint = new InterestPoint(user, x, y);
 		interestPointRepository.addInterestPoint(newInterestPoint);
+	}
+
+	public void updateInterestPoint(InterestPoint interestPoint) {
+		interestPointRepository.updateInterestPoint(interestPoint);
 	}
 
 	public void delete(InterestPoint interestPoint) {

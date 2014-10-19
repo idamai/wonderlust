@@ -59,4 +59,9 @@ public class InterestPointRepository {
 		return mongoTemplate.find(new Query(Criteria.where("location")
 				.withinSphere(circle)), InterestPoint.class, COLLECTION_NAME);
 	}
+
+	public InterestPoint getInterestPointById(String id) {
+
+		return mongoTemplate.findById(id, InterestPoint.class, COLLECTION_NAME);
+	}
 }
