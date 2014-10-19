@@ -25,7 +25,7 @@ public class Route implements Serializable {
 	@ManyToOne
 	List<InterestPoint> interestPoints = new ArrayList<InterestPoint>();;
 
-	public String getRouteId() {
+	public String getId() {
 		return id;
 	}
 
