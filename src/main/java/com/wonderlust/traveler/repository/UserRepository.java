@@ -44,7 +44,7 @@ public class UserRepository {
 	}
 
 	public void updateUser(UserModel user) {
-		mongoTemplate.insert(user, COLLECTION_NAME);
+		mongoTemplate.save(user, COLLECTION_NAME);
 	}
 
 }

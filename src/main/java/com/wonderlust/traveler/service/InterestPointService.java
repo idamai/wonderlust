@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import com.wonderlust.traveler.model.InterestPoint;
 import com.wonderlust.traveler.model.UserModel;
 import com.wonderlust.traveler.repository.InterestPointRepository;
-import com.wonderlust.traveler.repository.UserRepository;
 
 @Service
 public class InterestPointService {
@@ -18,7 +17,7 @@ public class InterestPointService {
 	InterestPointRepository interestPointRepository;
 
 	@Autowired
-	UserRepository userRepository;
+	UserService userService;
 
 	public List<InterestPoint> getInterestPoints() {
 		return interestPointRepository.listInterestPoint();
@@ -27,7 +26,7 @@ public class InterestPointService {
 	public List<InterestPoint> getInterestPointsByUser() {
 		User principal = (User) SecurityContextHolder.getContext()
 				.getAuthentication().getPrincipal();
-		UserModel user = userRepository.findByEmail(principal.getUsername());
+		UserModel user = userService.getUserByEmail(principal.getUsername());
 
 		return interestPointRepository.listInterestPointByUser(user);
 	}
@@ -41,34 +40,15 @@ public class InterestPointService {
 		return interestPointRepository.geoBoundInterestPoint(x1, y1, x2, y2);
 	}
 
-	public void addInterestPoint(InterestPoint preceedingInterestPoint,
-			Double x, Double y) {
+	public void addInterestPoint(Double x, Double y) {
 		User principal = (User) SecurityContextHolder.getContext()
 				.getAuthentication().getPrincipal();
-		UserModel user = userRepository.findByEmail(principal.getUsername());
+		UserModel user = userService.getUserByEmail(principal.getUsername());
 		InterestPoint newInterestPoint = new InterestPoint(user, x, y);
-		newInterestPoint.setPreceedingPoint(preceedingInterestPoint);
-		if (preceedingInterestPoint != null) {
-			preceedingInterestPoint.setProceedingPoint(newInterestPoint);
-		}
 		interestPointRepository.addInterestPoint(newInterestPoint);
-		interestPointRepository.updateInterestPoint(preceedingInterestPoint);
-	}
-
-	public void endRoute(InterestPoint interestPoint) {
-		interestPoint.setProceedingPoint(null);
-		interestPointRepository.updateInterestPoint(interestPoint);
 	}
 
 	public void delete(InterestPoint interestPoint) {
-		InterestPoint proceedingPoint = interestPoint.getPreceedingPoint();
-		InterestPoint preceedingPoint = interestPoint.getProceedingPoint();
-		if (proceedingPoint != null) {
-			proceedingPoint.setPreceedingPoint(preceedingPoint);
-		}
-		if (preceedingPoint != null) {
-			preceedingPoint.setProceedingPoint(proceedingPoint);
-		}
 		interestPointRepository.deleteInterestPoint(interestPoint);
 	}
 

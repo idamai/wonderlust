@@ -15,14 +15,10 @@ public class InterestPoint implements Serializable {
 	@ManyToMany
 	private UserModel user;
 
-	private InterestPoint preceedingPoint;
-
-	private InterestPoint proceedingPoint;
-
 	private Double[] location;
 
 	@PersistenceConstructor
-	public InterestPoint(UserModel user, Double[] location, String shape) {
+	public InterestPoint(UserModel user, Double[] location) {
 		this.user = user;
 		this.location = location;
 
@@ -48,22 +44,6 @@ public class InterestPoint implements Serializable {
 
 	public void setLocation(Double[] location) {
 		this.location = location;
-	}
-
-	public InterestPoint getPreceedingPoint() {
-		return preceedingPoint;
-	}
-
-	public void setPreceedingPoint(InterestPoint preceedingPoint) {
-		this.preceedingPoint = preceedingPoint;
-	}
-
-	public InterestPoint getProceedingPoint() {
-		return proceedingPoint;
-	}
-
-	public void setProceedingPoint(InterestPoint proceedingPoint) {
-		this.proceedingPoint = proceedingPoint;
 	}
 
 }

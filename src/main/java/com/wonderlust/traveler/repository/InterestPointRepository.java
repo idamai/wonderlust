@@ -43,7 +43,7 @@ public class InterestPointRepository {
 	}
 
 	public void updateInterestPoint(InterestPoint interestPoint) {
-		mongoTemplate.insert(interestPoint, COLLECTION_NAME);
+		mongoTemplate.save(interestPoint, COLLECTION_NAME);
 	}
 
 	public List<InterestPoint> geoBoundInterestPoint(Double x1, Double y1,
