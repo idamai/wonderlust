@@ -16,7 +16,7 @@ $(document).ready(function() {
 	};
 	map = new google.maps.Map(document.getElementById('wonderlust-map'), mapOptions);
 
-	// setting up map renderer options 
+	// setting up map renderer options
 	var rendererOptions = {
 		map : map,
 		suppressMarkers : true
@@ -42,7 +42,8 @@ $(document).ready(function() {
 			if (status == google.maps.GeocoderStatus.OK) {
 				var latitude = data[0].geometry.location.lat();
 				var longitude = data[0].geometry.location.lng();
-				var add = data[0].formatted_address; //this is the full address
+				var add = data[0].formatted_address; // this is the full
+														// address
 				$('#address').val(add);
 				var url = server + "/route";
 
@@ -53,14 +54,22 @@ $(document).ready(function() {
 					}).done(function(msg) {
 						alert("Data Saved: " + msg);
 						routeId = msg.routeId;
+						$.ajax({
+							type : "POST",
+							url : url + "/add-point?x=" + longitude + "&y=" + longitude + "&id=" + routeId
+						}).done(function(msg) {
+							alert("Data Saved: " + msg);
+						})
 					});
+
+				} else {
+					$.ajax({
+						type : "POST",
+						url : url + "/add-point?x=" + longitude + "&y=" + longitude + "&id=" + routeId
+					}).done(function(msg) {
+						alert("Data Saved: " + msg);
+					})
 				}
-				$.ajax({
-					type : "POST",
-					url : url + "/add-point?x=" + longitude + "&y=" + longitude + "&id=" + routeId
-				}).done(function(msg) {
-					alert("Data Saved: " + msg);
-				})
 			}
 		});
 
