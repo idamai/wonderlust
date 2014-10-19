@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<b:beans xmlns:b="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns="http://www.springframework.org/schema/security" xmlns:oauth="http://www.springframework.org/schema/security/oauth"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd http://www.springframework.org/schema/security/oauth http://www.springframework.org/schema/security/spring-security-oauth.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd 
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config />
+	<context:component-scan base-package="com.wonderlust.traveler" />
+
+	<!-- Global Security Settings -->
+	<global-method-security pre-post-annotations="enabled" />
+
+	<!-- Form and Security Access Configuration -->
+	<http use-expressions="true" access-denied-page="/403"
+		disable-url-rewriting="true">
+
+		<intercept-url pattern="/dashboard**"
+			access="hasRole('ROLE_USER')" />
+		<session-management invalid-session-url="/login?time=1">
+			<concurrency-control max-sessions="1"
+				expired-url="/login?time=1" />
+		</session-management>
+
+		<form-login login-page="/login" login-processing-url="/login.do"
+			default-target-url="/dashboard" always-use-default-target="true"
+			authentication-failure-url="/login?err=1" username-parameter="username"
+			password-parameter="password" />
+
+		<logout logout-url="/logout" logout-success-url="/login?out=1"
+			delete-cookies="JSESSIONID" invalidate-session="true" />
+
+		<intercept-url pattern="/dashboard**"
+			access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/api**"
+			access="hasRole('ROLE_USER')" />
+	</http>
+
+	<!-- Authentication Providers for Form Login -->
+	<authentication-manager alias="authenticationManager">
+		<!-- ADD THE AUTHENTICATION PROVIDERS HERE -->
+		<authentication-provider user-service-ref="loginService">
+			<password-encoder ref ="passwordEncoder"/>
+		</authentication-provider>
+	</authentication-manager>
+	
+	<!-- Password Encoder -->
+	<b:bean id="passwordEncoder"
+		class="org.springframework.security.crypto.password.StandardPasswordEncoder">
+		<b:constructor-arg value="abc" />
+	</b:bean>
+
+
+	<!-- ADD THE DATASOURCES HERE -->
+		<!-- Factory bean that creates the Mongo instance -->
+	<b:bean id="mongo"
+		class="org.springframework.data.mongodb.core.MongoFactoryBean">
+		<b:property name="host" value="localhost" />
+	</b:bean>
+
+	<!-- MongoTemplate for connecting and quering the documents in the database -->
+	<b:bean id="mongoTemplate"
+		class="org.springframework.data.mongodb.core.MongoTemplate">
+		<b:constructor-arg name="mongo" ref="mongo" />
+		<b:constructor-arg name="databaseName"
+			value="wonderlust" />
+	</b:bean>
+	
+</b:beans>
