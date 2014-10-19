@@ -61,8 +61,8 @@ var main = function(){
         $('.playback').show();
     });
 
-    ZiggeoApi.Styles.play_button_vertical_align = "center"; // "top" or "bottom"
+    /*ZiggeoApi.Styles.play_button_vertical_align = "center"; // "top" or "bottom"
     ZiggeoApi.Styles.play_button_horizontal_align = "center"; // "left" or "right"
-};
+*/};
 
 $(document).ready(main);
