@@ -7,7 +7,7 @@ $(document).ready(function() {
 	var wps = [];
 	var markers = [];
 	var server = "/wonderlust/api";
-	var routeId;
+	var route;
 	var interestPointId;
 	var firstAddress;
 	var secondAddress;
@@ -61,23 +61,18 @@ $(document).ready(function() {
 						url : url + "/new"
 					}).done(function(msg) {
 						
-						routeId = msg.routeId;
+						route = msg;
 						$.ajax({
 							type : "POST",
-							url : url + "/add-point?x=" + longitude + "&y=" + longitude + "&id=" + routeId
+							url : url + "/add-point?x=" + longitude + "&y=" + longitude + "&id=" + route.id
 						}).done(function(msg) {
-							$.ajax({
-								type : "POST",
-								url : url + "/add-point?id="+markers[2]+"&videoToken="++"&address="+add+"&description"+""
-							}).done(function(msg) {
-							});
 						})
 					});
 
 				} else {
 					$.ajax({
 						type : "POST",
-						url : url + "/add-point?x=" + longitude + "&y=" + longitude + "&id=" + routeId
+						url : url + "/add-point?x=" + longitude + "&y=" + longitude + "&id=" + route.id
 					}).done(function(msg) {
 						
 					})
@@ -142,54 +137,59 @@ $(document).ready(function() {
 
 					}
 
-					markers[i] = marker;
-					console.log(markers);
+					markers[i] = {
+							marker:marker,
+							ineterestPoint:route.interestOptions[i]
+					}
+					
+					
 
 				}
+				
 
-				google.maps.event.addListener(markers[0], 'click', function(event) {
+				google.maps.event.addListener(markers[0].marker, 'click', function(event) {
 					$('#first_pin').modal('toggle');
 					console.log(markers[0])
 					var url = server + "/interest-point";
 					$.ajax({
 						type : "GET",
-						url : url + "/get?id=" +"markers[0]"
+						url : url + "/get?id=" + marker[0].interestPoint.id
 					}).done(function(msg) {
 						alert ("Successful");
 					});
 				});
 
 				if (markers.length >= 2) {
-					google.maps.event.addListener(markers[1], 'click', function(event) {
+					google.maps.event.addListener(markers[1].marker, 'click', function(event) {
 						$('#second_pin').modal('toggle');
 						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
-							url : url + "/get"+"markers[1]"
+							url : url + "/get?id="+marker[1].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
 						});
 					});
 				}
 				if (markers.length >= 3) {
-					google.maps.event.addListener(markers[2], 'click', function(event) {
+					google.maps.event.addListener(markers[2].marker, 'click', function(event) {
 						$('#third_pin').modal('toggle');
 						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
-							url : url + "/get"+"markers[2]"
+							url : url + "/get?id="+marker[2].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
 						});
 					});
 				}
 				if (markers.length >= 4) {
-					google.maps.event.addListener(markers[3], 'click', function(event) {
+					google.maps.event.addListener(markers[3].marker, 'click', function(event) {
 						$('#fourth_pin').modal('toggle');
 						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
-							url : url + "/get"+"markers[3]"
+							url : url + "/get?id="+marker[3].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
 						});
@@ -197,48 +197,48 @@ $(document).ready(function() {
 				}
 
 				if (markers.length >= 5) {
-					google.maps.event.addListener(markers[4], 'click', function(event) {
+					google.maps.event.addListener(markers[4].marker, 'click', function(event) {
 						$('#fifth_pin').modal('toggle');
 						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
-							url : url + "/get"+"markers[4]"
+							url : url + "/get?id="+marker[4].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
 						});
 					});
 				}
 				if (markers.length >= 6) {
-					google.maps.event.addListener(markers[5], 'click', function(event) {
+					google.maps.event.addListener(markers[5].marker, 'click', function(event) {
 						$('#sixth_pin').modal('toggle');
 						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
-							url : url + "/get"+"markers[5]"
+							url : url + "/get?id="+marker[5].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
 						});
 					});
 				}
 				if (markers.length >= 7) {
-					google.maps.event.addListener(markers[6], 'click', function(event) {
+					google.maps.event.addListener(markers[6].marker, 'click', function(event) {
 						$('#seventh_pin').modal('toggle');
 						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
-							url : url + "/get"+"markers[6]"
+							url : url + "/get?id="+marker[6].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
 						});
 					});
 				}
 				if (markers.length >= 8) {
-					google.maps.event.addListener(markers[7], 'click', function(event) {
+					google.maps.event.addListener(markers[7].marker, 'click', function(event) {
 						$('#eighth_pin').modal('toggle');
 						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
-							url : url + "/get"+"markers[7]"
+							url : url + "/get?id="+marker[7].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
 						});
@@ -248,7 +248,7 @@ $(document).ready(function() {
 					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
-						url : url + "/add-point?id="+markers[0]+"&videoToken="++"&address="++"&description"+""
+						url : url + "/add-point?id="+markers[0].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
 					});
@@ -259,7 +259,7 @@ $(document).ready(function() {
 					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
-						url : url + "/add-point?id="+markers[1]+"&videoToken="++"&address="++"&description"+""
+						url : url + "/add-point?id="+markers[1].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
 					});
@@ -270,7 +270,7 @@ $(document).ready(function() {
 					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
-						url : url + "/add-point?id="+markers[2]+"&videoToken="++"&address="++"&description"+""
+						url : url + "/add-point?id="+markers[2].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
 					});
@@ -281,7 +281,7 @@ $(document).ready(function() {
 					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
-						url : url + "/add-point?id="+markers[3]+"&videoToken="++"&address="++"&description"+""
+						url : url + "/add-point?id="+markers[3].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
 					});
@@ -292,7 +292,7 @@ $(document).ready(function() {
 					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
-						url : url + "/add-point?id="+markers[4]+"&videoToken="++"&address="++"&description"+""
+						url : url + "/add-point?id="+markers[4].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
 					});
@@ -303,7 +303,7 @@ $(document).ready(function() {
 					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
-						url : url + "/add-point?id="+markers[5]+"&videoToken="++"&address="++"&description"+""
+						url : url + "/add-point?id="+markers[5].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
 					});
@@ -314,7 +314,7 @@ $(document).ready(function() {
 					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
-						url : url + "/add-point?id="+markers[6]+"&videoToken="++"&address="++"&description"+""
+						url : url + "/add-point?id="+markers[6].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
 					});
@@ -325,7 +325,7 @@ $(document).ready(function() {
 					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
-						url : url + "/add-point?id="+markers[7]+"&videoToken="++"&address="++"&description"+""
+						url : url + "/add-point?id="+markers[7].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
 					});
