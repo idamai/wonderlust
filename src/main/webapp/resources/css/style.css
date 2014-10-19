@@ -151,7 +151,7 @@ body {
   background-size: cover;
   width: 100%;
   text-align: center;
-  padding: 100px;
+  padding: 0px;
   margin-bottom: 0px;
 }
 
@@ -391,5 +391,37 @@ body {
 
 .submit-button:hover {
   background-color: #d4854c;
+}
+
+.video-recorder-outer {
+  width: 100% !important;
+  height: 256px !important;
+}
+
+.video-recorder-view-cid_1 {
+  width: 100% !important;
+  height: 256px !important;
+}
+
+embed[quality="high"] {
+  width: 100% !important;
+  height: 256px !important;
+}
+
+.video-recorder-initial {
+  width: 100% !important;
+  height: 256px !important;
+}
+
+a[data-selector="record-video"] {
+  position: relative;
+  bottom: 173px;
+  text-decoration: none;
+  padding: 11px;
+  border-radius: 22px;
+}
+
+a[data-selector="start-tutorial"] {
+  visibility: hidden;
 }
 
