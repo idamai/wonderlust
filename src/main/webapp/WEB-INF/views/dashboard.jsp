@@ -239,10 +239,10 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron video-1">
-                          <ziggeo class="record"></ziggeo>
-                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
-                        </div>
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
+
               <!-- End Carousel -->
 
 
@@ -333,10 +333,9 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron video-1">
-                          <ziggeo class="record"></ziggeo>
-                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
-                        </div>
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
 
               <!-- End Carousel -->
 
@@ -428,10 +427,9 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron video-1">
-                          <ziggeo class="record"></ziggeo>
-                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
-                        </div>
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
 
               <!-- End Carousel -->
 
@@ -523,10 +521,9 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron video-1">
-                          <ziggeo class="record"></ziggeo>
-                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
-                        </div>
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
 
               <!-- End Carousel -->
 
@@ -618,10 +615,9 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron video-1">
-                          <ziggeo class="record"></ziggeo>
-                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
-                        </div>
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
 
               <!-- End Carousel -->
 
@@ -713,10 +709,9 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron video-1">
-                          <ziggeo class="record"></ziggeo>
-                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
-                        </div>
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
 
               <!-- End Carousel -->
 

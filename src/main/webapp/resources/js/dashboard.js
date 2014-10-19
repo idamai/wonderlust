@@ -136,12 +136,10 @@ $(document).ready(function() {
 						});
 
 					}
-					
-//					markers[i] = marker;
-//					console.log(markers);
+
 					markers[i] = {
-							marker:marker
-							
+							marker:marker,
+							ineterestPoint:route.interestOptions[i]
 					}
 					
 					
@@ -151,186 +149,186 @@ $(document).ready(function() {
 
 				google.maps.event.addListener(markers[0].marker, 'click', function(event) {
 					$('#first_pin').modal('toggle');
-					/*console.log(markers[0])
+					console.log(markers[0])
 					var url = server + "/interest-point";
 					$.ajax({
 						type : "GET",
 						url : url + "/get?id=" + marker[0].interestPoint.id
 					}).done(function(msg) {
 						alert ("Successful");
-					});*/
+					});
 				});
 
 				if (markers.length >= 2) {
 					google.maps.event.addListener(markers[1].marker, 'click', function(event) {
 						$('#second_pin').modal('toggle');
-						/*var url = server + "/interest-point";
+						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
 							url : url + "/get?id="+marker[1].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
-						});*/
+						});
 					});
 				}
 				if (markers.length >= 3) {
 					google.maps.event.addListener(markers[2].marker, 'click', function(event) {
 						$('#third_pin').modal('toggle');
-						/*var url = server + "/interest-point";
+						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
 							url : url + "/get?id="+marker[2].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
-						});*/
+						});
 					});
 				}
 				if (markers.length >= 4) {
 					google.maps.event.addListener(markers[3].marker, 'click', function(event) {
 						$('#fourth_pin').modal('toggle');
-						/*var url = server + "/interest-point";
+						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
 							url : url + "/get?id="+marker[3].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
-						});*/
+						});
 					});
 				}
 
 				if (markers.length >= 5) {
 					google.maps.event.addListener(markers[4].marker, 'click', function(event) {
 						$('#fifth_pin').modal('toggle');
-						/*var url = server + "/interest-point";
+						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
 							url : url + "/get?id="+marker[4].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
-						});*/
+						});
 					});
 				}
 				if (markers.length >= 6) {
 					google.maps.event.addListener(markers[5].marker, 'click', function(event) {
 						$('#sixth_pin').modal('toggle');
-						/*var url = server + "/interest-point";
+						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
 							url : url + "/get?id="+marker[5].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
-						});*/
+						});
 					});
 				}
 				if (markers.length >= 7) {
 					google.maps.event.addListener(markers[6].marker, 'click', function(event) {
 						$('#seventh_pin').modal('toggle');
-						/*var url = server + "/interest-point";
+						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
 							url : url + "/get?id="+marker[6].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
-						});*/
+						});
 					});
 				}
 				if (markers.length >= 8) {
 					google.maps.event.addListener(markers[7].marker, 'click', function(event) {
 						$('#eighth_pin').modal('toggle');
-						/*var url = server + "/interest-point";
+						var url = server + "/interest-point";
 						$.ajax({
 							type : "GET",
 							url : url + "/get?id="+marker[7].interestPoint.id
 						}).done(function(msg) {
 							alert ("Successful");
-						});*/
+						});
 					});
 				}
 				$('#first-button').click(function() {
-					/*var url = server + "/interest-point";
+					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
 						url : url + "/add-point?id="+markers[0].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
-					});*/
+					});
 					
 					$('#first_pin').modal('hide');
 				});
 				$('#second-button').click(function() {
-					/*var url = server + "/interest-point";
+					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
 						url : url + "/add-point?id="+markers[1].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
-					});*/
+					});
 					
 					$('#second_pin').modal('hide');
 				});
 				$('#third-button').click(function() {
-					/*var url = server + "/interest-point";
+					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
 						url : url + "/add-point?id="+markers[2].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
-					});*/
+					});
 					
 					$('#third_pin').modal('hide');
 				});
 				$('#fourth-button').click(function() {
-					/*var url = server + "/interest-point";
+					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
 						url : url + "/add-point?id="+markers[3].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
-					});*/
+					});
 					
 					$('#fourth_pin').modal('hide');
 				});
 				$('#fifth-button').click(function() {
-					/*var url = server + "/interest-point";
+					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
 						url : url + "/add-point?id="+markers[4].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
-					});*/
+					});
 					
 					$('#fifth_pin').modal('hide');
 				});
 				$('#sixth-button').click(function() {
-					/*var url = server + "/interest-point";
+					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
 						url : url + "/add-point?id="+markers[5].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
-					});*/
+					});
 					
 					$('#sixth_pin').modal('hide');
 				});
 				$('#seventh-button').click(function() {
-					/*var url = server + "/interest-point";
+					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
 						url : url + "/add-point?id="+markers[6].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
-					});*/
+					});
 					
 					$('#seventh_pin').modal('hide');
 				});
 				$('#eighth-button').click(function() {
-					/*var url = server + "/interest-point";
+					var url = server + "/interest-point";
 					$.ajax({
 						type : "POST",
 						url : url + "/add-point?id="+markers[7].interestPoint.id+"&videoToken="++"&address="++"&description"+""
 					}).done(function(msg) {
 						alert ("Successful");
-					});*/
+					});
 					
 					$('#eighth_pin').modal('hide');
 				});
