@@ -38,123 +38,757 @@
 
 
 
-	<!-- MODAL SETUP -->
-	<div class="modal fade" id="textModal">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-body">
-					<div class="body-container pin-modal">
+	<!-- first modal -->
+    <div class="modal fade" id="first_pin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="body-container pin-modal">
+              
+
+      
+
+           
+              <!-- Carousel -->
+
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
+
+              <!-- End Carousel -->
 
 
 
+              <!--
+              <div class="jumbotron video-player-holder">
+                <iframe width="100%" height="315" src="http://www.youtube.com/embed/kebwTsRZ7bs" frameborder="0" allowfullscreen></iframe>
+              </div>
+              -->
 
+              <div class="pin-container">
 
-						<!-- Carousel -->
-						<div id="myCarousel" class="carousel slide">
-							<div class="carousel-inner">
-								<div class="item active">
-									<div class="jumbotron video-1">
-										<i class="fa fa-play fa-4x play-button"></i>
-									</div>
-								</div>
-								<div class="item">
-									<div class="jumbotron video-2">
-										<i class="fa fa-play fa-4x play-button"></i>
-									</div>
-								</div>
-								<div class="item">
-									<div class="jumbotron video-3">
-										<i class="fa fa-play fa-4x play-button"></i>
-									</div>
-								</div>
-							</div>
-
-							<a class="left carousel-control" id="carousel-buttons"
-								href="#myCarousel" data-slide="prev"> <i
-								class="fa fa-chevron-left slider-button"></i>
-							</a> <a class="right carousel-control" id="carousel-buttons"
-								href="#myCarousel" data-slide="next"> <i
-								class="fa fa-chevron-right slider-button"></i>
-							</a>
-						</div>
-						<!-- End Carousel -->
-
-
-
-						<!--
-                <div class="jumbotron video-player-holder">
-                  <iframe width="100%" height="315" src="http://www.youtube.com/embed/kebwTsRZ7bs" frameborder="0" allowfullscreen></iframe>
+                <!--Select Location-->
+                <div class="location-holder">
+                  <row>
+                    <div class="col-xs-12 location-details">
+                      <span class="attraction">Eiffel Tower</span>
+                      <span class="location">Champ de Mars, 75007, Paris</span>
+                    </div>
+                  </row>
                 </div>
-                -->
 
-						<div class="pin-container">
+                <!--Comments-->
 
-							<!--Select Location-->
-							<div class="location-holder">
-								<row>
-								<div class="col-xs-12 location-details">
-									<span class="attraction">Eiffel Tower</span> <span
-										class="location">Champ de Mars, 75007, Paris</span>
-								</div>
-								</row>
-							</div>
+                  <div class="comments-holder">
 
-							<!--Comments-->
+                    <row>
+                      <div class="col-xs-2">
+                        <div class="avatar">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
+                        </div>
+                      </div>
+                      <div class="col-xs-10 comment-input-holder">
+                        <form>
+                          <div class="form-group">
+                            <textarea class="form-control status-box" rows="2" placeholder="How was your experience?"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                    </row>
 
-							<div class="comments-holder">
-
-								<row>
-								<div class="col-xs-2">
-									<div class="avatar">
-										<img src="<c:url value="/resources/img/heewon.png"/>" />
-									</div>
-								</div>
-								<div class="col-xs-10 comment-input-holder">
-									<form>
-										<div class="form-group">
-											<textarea class="form-control status-box" rows="2"
-												placeholder="How was your experience?"></textarea>
-										</div>
-									</form>
-								</div>
-								</row>
-
-								<row>
-								<div class="col-xs-4 col-xs-offset-8">
-									<div class="button-group pull-right">
-										<p class="counter">140</p>
-										<a href="#" class="post-button"><i
-											class="fa fa-pencil pencil-button"></i></a>
-									</div>
-								</div>
-								</row>
+                    <row>
+                      <div class="col-xs-4 col-xs-offset-8">
+                        <div class="button-group pull-right">
+                          <p class="counter">140</p>
+                          <a href="#" class="post-button"><i class="fa fa-pencil pencil-button"></i></a>
+                        </div>
+                      </div>
+                    </row>
+                    
 
 
-
-								<ul class="posts">
-								</ul>
-
+                        <ul class="posts">
+                        </ul>
 
 
-							</div>
-							<!-- END COMMENTS HOLDER -->
-						</div>
-						<!-- END PIN CONTAINER -->
-					</div>
-					<!-- END BODY CONTAINER -->
+                  
+                  </div>
+                  <!-- END COMMENTS HOLDER -->
+              </div>
+              <!-- END PIN CONTAINER -->
+            </div>
+            <!-- END BODY CONTAINER -->
 
-					<!--Pin It!-->
-					<div class="check-in-holder pin-it">
-						<a class="check-in-link">
-							<div class="check-in-button">Pin It!</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <!--Pin It!-->
+            <div class="check-in-holder pin-it">
+              <a class="check-in-link">
+                <div class="check-in-button" id="first-button">
+                  Pin It!
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<!-- second modal -->
+    <div class="modal fade" id="second_pin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="body-container pin-modal">
+              
+
+      
+
+           
+              <!-- Carousel -->
+
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
+
+              <!-- End Carousel -->
 
 
+
+              <!--
+              <div class="jumbotron video-player-holder">
+                <iframe width="100%" height="315" src="http://www.youtube.com/embed/kebwTsRZ7bs" frameborder="0" allowfullscreen></iframe>
+              </div>
+              -->
+
+              <div class="pin-container">
+
+                <!--Select Location-->
+                <div class="location-holder">
+                  <row>
+                    <div class="col-xs-12 location-details">
+                      <span class="attraction">Eiffel Tower</span>
+                      <span class="location">Champ de Mars, 75007, Paris</span>
+                    </div>
+                  </row>
+                </div>
+
+                <!--Comments-->
+
+                  <div class="comments-holder">
+
+                    <row>
+                      <div class="col-xs-2">
+                        <div class="avatar">
+                          <img src="img/heewon.png">
+                        </div>
+                      </div>
+                      <div class="col-xs-10 comment-input-holder">
+                        <form>
+                          <div class="form-group">
+                            <textarea class="form-control status-box" rows="2" placeholder="How was your experience?"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                    </row>
+
+                    <row>
+                      <div class="col-xs-4 col-xs-offset-8">
+                        <div class="button-group pull-right">
+                          <p class="counter">140</p>
+                          <a href="#" class="post-button"><i class="fa fa-pencil pencil-button"></i></a>
+                        </div>
+                      </div>
+                    </row>
+                    
+
+
+                        <ul class="posts">
+                        </ul>
+
+
+                  
+                  </div>
+                  <!-- END COMMENTS HOLDER -->
+              </div>
+              <!-- END PIN CONTAINER -->
+            </div>
+            <!-- END BODY CONTAINER -->
+
+            <!--Pin It!-->
+            <div class="check-in-holder pin-it">
+              <a class="check-in-link">
+                <div class="check-in-button" id="second-button">
+                  Pin It!
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- third modal -->
+    <div class="modal fade" id="third_pin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="body-container pin-modal">
+              
+
+      
+
+           
+              <!-- Carousel -->
+
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
+
+              <!-- End Carousel -->
+
+
+
+              <!--
+              <div class="jumbotron video-player-holder">
+                <iframe width="100%" height="315" src="http://www.youtube.com/embed/kebwTsRZ7bs" frameborder="0" allowfullscreen></iframe>
+              </div>
+              -->
+
+              <div class="pin-container">
+
+                <!--Select Location-->
+                <div class="location-holder">
+                  <row>
+                    <div class="col-xs-12 location-details">
+                      <span class="attraction">Eiffel Tower</span>
+                      <span class="location">Champ de Mars, 75007, Paris</span>
+                    </div>
+                  </row>
+                </div>
+
+                <!--Comments-->
+
+                  <div class="comments-holder">
+
+                    <row>
+                      <div class="col-xs-2">
+                        <div class="avatar">
+                          <img src="img/heewon.png">
+                        </div>
+                      </div>
+                      <div class="col-xs-10 comment-input-holder">
+                        <form>
+                          <div class="form-group">
+                            <textarea class="form-control status-box" rows="2" placeholder="How was your experience?"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                    </row>
+
+                    <row>
+                      <div class="col-xs-4 col-xs-offset-8">
+                        <div class="button-group pull-right">
+                          <p class="counter">140</p>
+                          <a href="#" class="post-button"><i class="fa fa-pencil pencil-button"></i></a>
+                        </div>
+                      </div>
+                    </row>
+                    
+
+
+                        <ul class="posts">
+                        </ul>
+
+
+                  
+                  </div>
+                  <!-- END COMMENTS HOLDER -->
+              </div>
+              <!-- END PIN CONTAINER -->
+            </div>
+            <!-- END BODY CONTAINER -->
+
+            <!--Pin It!-->
+            <div class="check-in-holder pin-it">
+              <a class="check-in-link">
+                <div class="check-in-button" id="third-button">
+                  Pin It!
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- fourth modal -->
+    <div class="modal fade" id="fourth_pin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="body-container pin-modal">
+              
+
+      
+
+           
+              <!-- Carousel -->
+
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
+
+              <!-- End Carousel -->
+
+
+
+              <!--
+              <div class="jumbotron video-player-holder">
+                <iframe width="100%" height="315" src="http://www.youtube.com/embed/kebwTsRZ7bs" frameborder="0" allowfullscreen></iframe>
+              </div>
+              -->
+
+              <div class="pin-container">
+
+                <!--Select Location-->
+                <div class="location-holder">
+                  <row>
+                    <div class="col-xs-12 location-details">
+                      <span class="attraction">Eiffel Tower</span>
+                      <span class="location">Champ de Mars, 75007, Paris</span>
+                    </div>
+                  </row>
+                </div>
+
+                <!--Comments-->
+
+                  <div class="comments-holder">
+
+                    <row>
+                      <div class="col-xs-2">
+                        <div class="avatar">
+                          <img src="img/heewon.png">
+                        </div>
+                      </div>
+                      <div class="col-xs-10 comment-input-holder">
+                        <form>
+                          <div class="form-group">
+                            <textarea class="form-control status-box" rows="2" placeholder="How was your experience?"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                    </row>
+
+                    <row>
+                      <div class="col-xs-4 col-xs-offset-8">
+                        <div class="button-group pull-right">
+                          <p class="counter">140</p>
+                          <a href="#" class="post-button"><i class="fa fa-pencil pencil-button"></i></a>
+                        </div>
+                      </div>
+                    </row>
+                    
+
+
+                        <ul class="posts">
+                        </ul>
+
+
+                  
+                  </div>
+                  <!-- END COMMENTS HOLDER -->
+              </div>
+              <!-- END PIN CONTAINER -->
+            </div>
+            <!-- END BODY CONTAINER -->
+
+            <!--Pin It!-->
+            <div class="check-in-holder pin-it">
+              <a class="check-in-link">
+                <div class="check-in-button" id="fourth-button">
+                  Pin It!
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- fifth modal -->
+    <div class="modal fade" id="fifth_pin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="body-container pin-modal">
+              
+
+      
+
+           
+              <!-- Carousel -->
+
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
+
+              <!-- End Carousel -->
+
+
+
+              <!--
+              <div class="jumbotron video-player-holder">
+                <iframe width="100%" height="315" src="http://www.youtube.com/embed/kebwTsRZ7bs" frameborder="0" allowfullscreen></iframe>
+              </div>
+              -->
+
+              <div class="pin-container">
+
+                <!--Select Location-->
+                <div class="location-holder">
+                  <row>
+                    <div class="col-xs-12 location-details">
+                      <span class="attraction">Eiffel Tower</span>
+                      <span class="location">Champ de Mars, 75007, Paris</span>
+                    </div>
+                  </row>
+                </div>
+
+                <!--Comments-->
+
+                  <div class="comments-holder">
+
+                    <row>
+                      <div class="col-xs-2">
+                        <div class="avatar">
+                          <img src="img/heewon.png">
+                        </div>
+                      </div>
+                      <div class="col-xs-10 comment-input-holder">
+                        <form>
+                          <div class="form-group">
+                            <textarea class="form-control status-box" rows="2" placeholder="How was your experience?"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                    </row>
+
+                    <row>
+                      <div class="col-xs-4 col-xs-offset-8">
+                        <div class="button-group pull-right">
+                          <p class="counter">140</p>
+                          <a href="#" class="post-button"><i class="fa fa-pencil pencil-button"></i></a>
+                        </div>
+                      </div>
+                    </row>
+                    
+
+
+                        <ul class="posts">
+                        </ul>
+
+
+                  
+                  </div>
+                  <!-- END COMMENTS HOLDER -->
+              </div>
+              <!-- END PIN CONTAINER -->
+            </div>
+            <!-- END BODY CONTAINER -->
+
+            <!--Pin It!-->
+            <div class="check-in-holder pin-it">
+              <a class="check-in-link">
+                <div class="check-in-button" id="fifth-button">
+                  Pin It!
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- sixth modal -->
+    <div class="modal fade" id="sixth_pin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="body-container pin-modal">
+              
+
+      
+
+           
+              <!-- Carousel -->
+
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
+
+              <!-- End Carousel -->
+
+
+
+              <!--
+              <div class="jumbotron video-player-holder">
+                <iframe width="100%" height="315" src="http://www.youtube.com/embed/kebwTsRZ7bs" frameborder="0" allowfullscreen></iframe>
+              </div>
+              -->
+
+              <div class="pin-container">
+
+                <!--Select Location-->
+                <div class="location-holder">
+                  <row>
+                    <div class="col-xs-12 location-details">
+                      <span class="attraction">Eiffel Tower</span>
+                      <span class="location">Champ de Mars, 75007, Paris</span>
+                    </div>
+                  </row>
+                </div>
+
+                <!--Comments-->
+
+                  <div class="comments-holder">
+
+                    <row>
+                      <div class="col-xs-2">
+                        <div class="avatar">
+                          <img src="img/heewon.png">
+                        </div>
+                      </div>
+                      <div class="col-xs-10 comment-input-holder">
+                        <form>
+                          <div class="form-group">
+                            <textarea class="form-control status-box" rows="2" placeholder="How was your experience?"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                    </row>
+
+                    <row>
+                      <div class="col-xs-4 col-xs-offset-8">
+                        <div class="button-group pull-right">
+                          <p class="counter">140</p>
+                          <a href="#" class="post-button"><i class="fa fa-pencil pencil-button"></i></a>
+                        </div>
+                      </div>
+                    </row>
+                    
+
+
+                        <ul class="posts">
+                        </ul>
+
+
+                  
+                  </div>
+                  <!-- END COMMENTS HOLDER -->
+              </div>
+              <!-- END PIN CONTAINER -->
+            </div>
+            <!-- END BODY CONTAINER -->
+
+            <!--Pin It!-->
+            <div class="check-in-holder pin-it">
+              <a class="check-in-link">
+                <div class="check-in-button" id="sixth-button">
+                  Pin It!
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- seventh modal -->
+    <div class="modal fade" id="seventh_pin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="body-container pin-modal">
+              
+
+      
+
+           
+              <!-- Carousel -->
+
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
+
+              <!-- End Carousel -->
+
+
+
+              <!--
+              <div class="jumbotron video-player-holder">
+                <iframe width="100%" height="315" src="http://www.youtube.com/embed/kebwTsRZ7bs" frameborder="0" allowfullscreen></iframe>
+              </div>
+              -->
+
+              <div class="pin-container">
+
+                <!--Select Location-->
+                <div class="location-holder">
+                  <row>
+                    <div class="col-xs-12 location-details">
+                      <span class="attraction">Eiffel Tower</span>
+                      <span class="location">Champ de Mars, 75007, Paris</span>
+                    </div>
+                  </row>
+                </div>
+
+                <!--Comments-->
+
+                  <div class="comments-holder">
+
+                    <row>
+                      <div class="col-xs-2">
+                        <div class="avatar">
+                          <img src="img/heewon.png">
+                        </div>
+                      </div>
+                      <div class="col-xs-10 comment-input-holder">
+                        <form>
+                          <div class="form-group">
+                            <textarea class="form-control status-box" rows="2" placeholder="How was your experience?"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                    </row>
+
+                    <row>
+                      <div class="col-xs-4 col-xs-offset-8">
+                        <div class="button-group pull-right">
+                          <p class="counter">140</p>
+                          <a href="#" class="post-button"><i class="fa fa-pencil pencil-button"></i></a>
+                        </div>
+                      </div>
+                    </row>
+                    
+
+
+                        <ul class="posts">
+                        </ul>
+
+
+                  
+                  </div>
+                  <!-- END COMMENTS HOLDER -->
+              </div>
+              <!-- END PIN CONTAINER -->
+            </div>
+            <!-- END BODY CONTAINER -->
+
+            <!--Pin It!-->
+            <div class="check-in-holder pin-it">
+              <a class="check-in-link">
+                <div class="check-in-button" id="seventh-button">
+                  Pin It!
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- eighth modal -->
+    <div class="modal fade" id="eighth_pin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="body-container pin-modal">
+              
+
+      
+
+           
+              <!-- Carousel -->
+
+              <div class="jumbotron">
+                <ziggeo></ziggeo>
+              </div>
+
+              <!-- End Carousel -->
+
+
+
+              <!--
+              <div class="jumbotron video-player-holder">
+                <iframe width="100%" height="315" src="http://www.youtube.com/embed/kebwTsRZ7bs" frameborder="0" allowfullscreen></iframe>
+              </div>
+              -->
+
+              <div class="pin-container">
+
+                <!--Select Location-->
+                <div class="location-holder">
+                  <row>
+                    <div class="col-xs-12 location-details">
+                      <span class="attraction">Eiffel Tower</span>
+                      <span class="location">Champ de Mars, 75007, Paris</span>
+                    </div>
+                  </row>
+                </div>
+
+                <!--Comments-->
+
+                  <div class="comments-holder">
+
+                    <row>
+                      <div class="col-xs-2">
+                        <div class="avatar">
+                          <img src="img/heewon.png">
+                        </div>
+                      </div>
+                      <div class="col-xs-10 comment-input-holder">
+                        <form>
+                          <div class="form-group">
+                            <textarea class="form-control status-box" rows="2" placeholder="How was your experience?"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                    </row>
+
+                    <row>
+                      <div class="col-xs-4 col-xs-offset-8">
+                        <div class="button-group pull-right">
+                          <p class="counter">140</p>
+                          <a href="#" class="post-button"><i class="fa fa-pencil pencil-button"></i></a>
+                        </div>
+                      </div>
+                    </row>
+                    
+
+
+                        <ul class="posts">
+                        </ul>
+
+
+                  
+                  </div>
+                  <!-- END COMMENTS HOLDER -->
+              </div>
+              <!-- END PIN CONTAINER -->
+            </div>
+            <!-- END BODY CONTAINER -->
+
+            <!--Pin It!-->
+            <div class="check-in-holder pin-it">
+              <a class="check-in-link">
+                <div class="check-in-button" id="eighth-button">
+                  Pin It!
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 	<script type="text/javascript"

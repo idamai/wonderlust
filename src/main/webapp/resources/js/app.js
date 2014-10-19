@@ -7,9 +7,9 @@ var main = function(){
         
         $('<li>').prependTo('.posts');
 
-        $('<p class="post-content">').text(post).prependTo('li:first')
+        $('<p class="post-content">').text(post).prependTo('.posts li:first')
 
-        $('<p class="poster-name">').text('Hee Won').prependTo('li:first');
+        $('<p class="poster-name">').text('Hee Won').prependTo('.posts li:first');
         
         $('.status-box').val('');
         
@@ -42,9 +42,10 @@ var main = function(){
     
     $('.post-button').addClass('disabled');
     
-    $(function() {
-        $('.banner').unslider();
-    });
+
+    $('.video-recorder-outer').css("height", "256px");
+
+    $('.inner-container .btn-primary').html()
 };
 
 $(document).ready(main);
