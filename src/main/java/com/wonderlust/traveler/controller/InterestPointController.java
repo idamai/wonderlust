@@ -20,12 +20,12 @@ public class InterestPointController {
 
 	@ResponseBody
 	@RequestMapping(value = "/get", method = RequestMethod.GET)
-	InterestPoint create(@RequestParam String id) {
+	InterestPoint getInterestPoint(@RequestParam String id) {
 		return interestPointService.getInterestPointById(id);
 	}
 
 	@ResponseBody
-	@RequestMapping(value = "/add-point", method = RequestMethod.POST)
+	@RequestMapping(value = "/update-point", method = RequestMethod.POST)
 	InterestPoint updatePoint(@RequestParam String id,
 			@RequestParam String videoToken, @RequestParam String address,
 			@RequestBody String description) {
