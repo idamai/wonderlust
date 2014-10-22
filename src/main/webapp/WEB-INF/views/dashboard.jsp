@@ -178,7 +178,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -272,7 +272,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -367,7 +367,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -462,7 +462,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -557,7 +557,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -652,7 +652,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -747,7 +747,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">

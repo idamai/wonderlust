@@ -1,5 +1,6 @@
 var main = function(){
     
+	$('.playback').hide();
     
     $('.post-button').click(function(){
         
@@ -19,7 +20,12 @@ var main = function(){
         
     });
     
+    ZiggeoApi.Events.on("submitted",function(data){
+    	$('.record').hide();
+    	$('.playback').show();
+    });
     
+     
     $('.status-box').keyup(function(){
         var postLength = $(this).val().length
         var charactersLeft = 140 - postLength
