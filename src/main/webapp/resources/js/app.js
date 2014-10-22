@@ -49,9 +49,26 @@ var main = function(){
     $('.post-button').addClass('disabled');
     
 
-    $('.video-recorder-outer').css("height", "256px");
+    $('.playback').hide();
 
-    $('.inner-container .btn-primary').html()
-};
+    
+
+    ZiggeoApi.Events.on("submitted", function (data) {
+
+        alert("Submitted a new video with token '" + data.video.token + "'!");
+
+
+        var video_code = data.video.token;
+
+        $('.playback').attr("ziggeo-video", $('video_code')); 
+
+        $('.record').hide();
+
+        $('.playback').show();
+    });
+
+    /*ZiggeoApi.Styles.play_button_vertical_align = "center"; // "top" or "bottom"
+    ZiggeoApi.Styles.play_button_horizontal_align = "center"; // "left" or "right"
+*/};
 
 $(document).ready(main);

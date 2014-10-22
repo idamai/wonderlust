@@ -123,14 +123,10 @@ body {
   border-radius: 130px;
   width: 100px;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.2em;
   height: 100px;
   padding-top: 37px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  margin-top: 200px;
 }
 
 .body-container {
@@ -146,13 +142,12 @@ body {
 }
 
 .jumbotron {
-  background-image: url('../img/video-img.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   text-align: center;
-  padding: 0px;
   margin-bottom: 0px;
+  padding: 0px;
 }
 
 .video-1 {
@@ -393,6 +388,9 @@ body {
   background-color: #d4854c;
 }
 
+/* ziggeo
+=================================================================*/
+
 .video-recorder-outer {
   width: 100% !important;
   height: 256px !important;
@@ -425,3 +423,26 @@ a[data-selector="start-tutorial"] {
   visibility: hidden;
 }
 
+div[data-view-id="cid_14"] {
+  width: 100% !important;
+  height: 256px !important;
+}
+
+.playback {
+  width: 100% !important;
+  height: 256px !important;
+}
+
+.video-player-outer {
+  width: 100% !important;
+  height: 256px !important;
+}
+
+.video-player-content {
+  width: 100% !important;
+  height: 256px !important;
+}
+
+#textModal {
+  padding-left: 8px;
+}
