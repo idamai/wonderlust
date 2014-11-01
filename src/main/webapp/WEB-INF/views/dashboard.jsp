@@ -178,7 +178,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -239,10 +239,10 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron">
-                <ziggeo></ziggeo>
-              </div>
-
+              <div class="jumbotron video-1">
+                          <ziggeo class="record"></ziggeo>
+                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
+                        </div>
               <!-- End Carousel -->
 
 
@@ -272,7 +272,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -333,9 +333,10 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron">
-                <ziggeo></ziggeo>
-              </div>
+              <div class="jumbotron video-1">
+                          <ziggeo class="record"></ziggeo>
+                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
+                        </div>
 
               <!-- End Carousel -->
 
@@ -366,7 +367,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -427,9 +428,10 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron">
-                <ziggeo></ziggeo>
-              </div>
+              <div class="jumbotron video-1">
+                          <ziggeo class="record"></ziggeo>
+                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
+                        </div>
 
               <!-- End Carousel -->
 
@@ -460,7 +462,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -521,9 +523,10 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron">
-                <ziggeo></ziggeo>
-              </div>
+              <div class="jumbotron video-1">
+                          <ziggeo class="record"></ziggeo>
+                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
+                        </div>
 
               <!-- End Carousel -->
 
@@ -554,7 +557,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -615,9 +618,10 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron">
-                <ziggeo></ziggeo>
-              </div>
+              <div class="jumbotron video-1">
+                          <ziggeo class="record"></ziggeo>
+                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
+                        </div>
 
               <!-- End Carousel -->
 
@@ -648,7 +652,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
@@ -709,9 +713,10 @@
            
               <!-- Carousel -->
 
-              <div class="jumbotron">
-                <ziggeo></ziggeo>
-              </div>
+              <div class="jumbotron video-1">
+                          <ziggeo class="record"></ziggeo>
+                          <ziggeo class="playback" ziggeo-video='32c71398482b5873899eaa60e0a7f895'></ziggeo>
+                        </div>
 
               <!-- End Carousel -->
 
@@ -742,7 +747,7 @@
                     <row>
                       <div class="col-xs-2">
                         <div class="avatar">
-                          <img src="img/heewon.png">
+                          <img src="<c:url value="/resources/img/heewon.png"/>">
                         </div>
                       </div>
                       <div class="col-xs-10 comment-input-holder">
